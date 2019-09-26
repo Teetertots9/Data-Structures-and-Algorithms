@@ -1,0 +1,5 @@
+﻿  Source.cpp
+C:\Users\x00139120\Desktop\Data-Structures-and-Algorithms\LabSheet3PartATask1\LabSheet3PartATask1\Source.cpp(25,23): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\x00139120\Desktop\Data-Structures-and-Algorithms\LabSheet3PartATask1\LabSheet3PartATask1\Source.cpp(94,23): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\x00139120\Desktop\Data-Structures-and-Algorithms\LabSheet3PartATask1\LabSheet3PartATask1\Source.cpp(102,23): warning C4018:  '<': signed/unsigned mismatch
+  LabSheet3PartATask1.vcxproj -> C:\Users\x00139120\Desktop\Data-Structures-and-Algorithms\LabSheet3PartATask1\Debug\LabSheet3PartATask1.exe
