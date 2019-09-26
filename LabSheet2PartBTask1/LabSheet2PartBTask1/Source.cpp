@@ -2,33 +2,8 @@
 using namespace std;
 
 
+bool timeConversion(int h, int m, int s);
 
-bool timeConversion(int h, int m, int s) 
-{
-	
-	const char AM = 'A';
-	const char PM = 'P';
-	const int HOUR_CONTROL = 24;
-	const int HOUR_CONVERSION = 12;
-	const int MINUTE_SECOND_CONTROL = 60;
-	if (h > HOUR_CONTROL) {
-		return false;
-	} else if (m > MINUTE_SECOND_CONTROL) {
-		return false;
-	} else if (s > MINUTE_SECOND_CONTROL) {
-		return false;
-	} else {
-		if (h > HOUR_CONVERSION) {
-			h = h % HOUR_CONVERSION;
-			cout << h << ":" << m << ":" << s << PM << 'M' << endl;
-			return true;
-		}
-		else {
-			cout << h << ":" << m << ":" << s << AM << 'M' << endl;
-			return true;
-		}
-	}
-}
 
 int main()
 {
@@ -71,14 +46,46 @@ int main()
 
 	}
 
-
-
-
-
-
-
-
-
-
 	return 0;
+
+	
+
+
+
+
+
+
+
+
+	
+}
+
+bool timeConversion(int h, int m, int s)
+{
+
+	const char AM = 'A';
+	const char PM = 'P';
+	const int HOUR_CONTROL = 24;
+	const int HOUR_CONVERSION = 12;
+	const int MINUTE_SECOND_CONTROL = 60;
+	if (h >= HOUR_CONTROL) {
+		return false;
+	}
+	else if (m >= MINUTE_SECOND_CONTROL) {
+		return false;
+	}
+	else if (s >= MINUTE_SECOND_CONTROL) {
+		return false;
+	}
+	else {
+		if (h > HOUR_CONVERSION) {
+			h = h % HOUR_CONVERSION;
+			cout << h << ":" << m << ":" << s << PM << 'M' << endl;
+			return true;
+		}
+		else {
+			cout << h << ":" << m << ":" << s << AM << 'M' << endl;
+			return true;
+		}
+	}
 }
