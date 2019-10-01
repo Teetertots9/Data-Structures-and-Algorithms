@@ -1,6 +1,7 @@
 #include<iostream>
 #include<string>
 #include<string.h>
+
 using namespace std;
 const int SEVEN = 7;
 const int FIVE = 5;
@@ -44,55 +45,69 @@ int main()
 	}
 	string seatRow = " ";
 	string seat = " ";
+	int escape = 0;
+	string escapeS = " ";
 
-	cout << "please enter desired seat row number and seat" << endl;
-	cin >> seatRow;
-	cin >> seat;
-	bool control = false;
-	int result1, result2 = 1;
-	for (size_t i = 0; i < SEVEN; i++)
-	{
-		result1 = strncmp(seats[i][0], seatRow);
-		for (size_t j = 1; j < FIVE; j++)
-		{
-			result2 = strncmp(seats[i][j], seat);
-			if (result1 == 0) {
-				if (result2 == 0) {
-					seats[i][j] = "X";
-					control = true;
-				} 
-			}
-		}
-	}
-	while(!control) {
-		cout << "Please enter a valid seat" << endl;
+
+	while (escape == 0) {
+		cout << "please enter desired seat row number and seat" << endl;
 		cin >> seatRow;
 		cin >> seat;
+		bool control = false;
+		int result1, result2 = 1;
 		for (size_t i = 0; i < SEVEN; i++)
 		{
+			result1 = seats[i][0].compare(seatRow);
 			for (size_t j = 1; j < FIVE; j++)
 			{
-				if (seats[i][0].compare(seatRow)) {
-					if (seats[i][j].compare(seat)) {
+				result2 = seats[i][j].compare(seat);
+				if (result1 == 0) {
+					if (result2 == 0) {
 						seats[i][j] = "X";
 						control = true;
-						i = SEVEN;
-						j = FIVE;
 					}
 				}
 			}
 		}
+		while (!control) {
+			cout << "Please enter a valid seat" << endl;
+			cin >> seatRow;
+			cin >> seat;
+			for (size_t i = 0; i < SEVEN; i++)
+			{
+				for (size_t j = 1; j < FIVE; j++)
+				{
+					if (seats[i][0].compare(seatRow)) {
+						if (seats[i][j].compare(seat)) {
+							seats[i][j] = "X";
+							control = true;
+							i = SEVEN;
+							j = FIVE;
+						}
+					}
+				}
+			}
+		}
+
+		for (size_t i = 0; i < SEVEN; i++)
+		{
+			cout << seats[i][0] << " ";
+			for (size_t j = 1; j < FIVE; j++)
+			{
+				cout << seats[i][j] << " ";
+			}
+			cout << endl;
+		}
+
+		cout << "Would you like to book another seat? Y/N" << endl;
+		cin >> escapeS;
+		if (escapeS == "N" || escapeS == "n") {
+			escape = 1;
+		}
+
 	}
 
-	for (size_t i = 0; i < SEVEN; i++)
-	{
-		cout << seats[i][0] << " ";
-		for (size_t j = 1; j < FIVE; j++)
-		{
-			cout << seats[i][j] << " ";
-		}
-		cout << endl;
-	}
+	
 
 	return 0;
 }
