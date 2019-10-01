@@ -109,4 +109,4 @@ void AverageN(float f[], int length)
 			cout << "To get the average of value " << i + 1 << " you must add/subtract: " << f[i] - average << endl;
 		}
 	}
-}
+}//Use a vector
