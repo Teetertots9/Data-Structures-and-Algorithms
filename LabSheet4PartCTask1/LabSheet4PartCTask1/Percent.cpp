@@ -5,47 +5,35 @@ using namespace std;
 Percent::Percent() {
 	value = 0;
 }
-const Percent::+(const Percent& first, const Percent& second) {
-	Percent temp;
-	temp.value = first.value + second.value;
-	return temp;
+
+int operator +(const Percent& first, const Percent& second) {
+	return  first.value + second.value;
 }
 
-int Percent::-(const Percent& first, const Percent& second) {
-	Percent temp;
-	temp.value = first.value - second.value;
-	return temp;
+int operator -(const Percent& first, const Percent& second) {
+	return  first.value - second.value;
 }
 
-int Percent::*(const Percent& first, const Percent& second) {
-	Percent temp;
-	temp.value = (first.value * second.value) / 100;
-	return temp;
+int operator *(const Percent& first, const Percent& second) {
+	return  (first.value * second.value) / 100;
 }
 
-bool Percent::==(const Percent& first, const Percent& second) {
-	bool output = false;
-	if (first == = second) {
-		output = true;
-	}
-	return output;
+bool operator ==(const Percent& first, const Percent& second) {
+	return first.value == second.value;
 }
 
-bool Percent::<(const Percent& first, const Percent& second) {
-	bool output = false;
-	if (first < second) {
-		output = true;
-	}
-	return output;
+bool operator <(const Percent& first, const Percent& second) {
+	return  first.value < second.value;
 }
 
-instream& Percent::>>(istream& inputStream, Percent& aPercent) {
+istream& operator >>(istream& inputStream, Percent& aPercent) {
 	cout << "Please enter Percentage";
 	inputStream >> aPercent.value;
 	return inputStream;
 }
 
-outstream& Percent::<<(outstream& outputStream, Percent& aPercent) {
-	outputStream << input << "%" << endl;
+ostream& operator <<(ostream& outputStream, const Percent& aPercent)
+{
+	outputStream << aPercent.value << "%" << endl;
 	return outputStream;
 }
