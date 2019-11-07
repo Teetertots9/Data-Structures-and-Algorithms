@@ -1,5 +1,0 @@
-﻿  Source.cpp
-C:\Users\Dell User\Documents\College\Data-Structures-and-Algorithms\LabSheet4PartATask1\LabSheet4PartATask1\Source.cpp(13,23): warning C4018:  '<': signed/unsigned mismatch
-C:\Users\Dell User\Documents\College\Data-Structures-and-Algorithms\LabSheet4PartATask1\LabSheet4PartATask1\Source.cpp(30,23): warning C4018:  '<': signed/unsigned mismatch
-C:\Users\Dell User\Documents\College\Data-Structures-and-Algorithms\LabSheet4PartATask1\LabSheet4PartATask1\Source.cpp(32,24): warning C4018:  '<': signed/unsigned mismatch
-  LabSheet4PartATask1.vcxproj -> C:\Users\Dell User\Documents\College\Data-Structures-and-Algorithms\LabSheet4PartATask1\Debug\LabSheet4PartATask1.exe
