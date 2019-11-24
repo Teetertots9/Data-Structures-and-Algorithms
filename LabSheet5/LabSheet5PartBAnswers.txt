@@ -1,0 +1,46 @@
+Q1:
+
+#include <iostream>
+using namespace std;
+
+
+int main() {
+
+	double* d = new double[3]; //array was not given an actual size.
+
+	for (int i = 0; i < 3; i++) {
+		d[i] = 1.5 + i;
+	}
+
+	for (int i = 2; i >= 0; i--) {
+		cout << d[i] << endl;
+	} //using Unsigned int causes it to loop indefinitely
+	
+	delete[] d;//Not deleted, will result in issues with memory later on
+
+	return 0;
+}
+
+Q2:
+
+#include <iostream>
+using namespace std;//iostream wasn't imported and given namespace
+
+int main()
+{
+	char chr = 'N';
+	if (chr == 'Y' || chr == 'y') { //is a non-zero constant second character wasn't being equated to variable
+		cout << "chr is y" << endl;
+	}
+	else if (chr == 'N' || chr == 'n'){ //is a non-zero constant second character wasn't being equated to variable
+		cout << "chr is n" << endl;
+	} else {
+		cout << "chr is something else" << endl;
+	}
+	return 0; //program was returning "chr is y" as the if wasn't comparing the variable right
+}
+
+Q3:
+
+Q4:Both will Loop endlessly as there is no way for the loop to progress as the "int count = 1;" set's the count variable back to 1 meaning it will never increment to above 5.
+The first loop iterates at the start of the next iteration while the second loop iterates right before the end of the iteration.

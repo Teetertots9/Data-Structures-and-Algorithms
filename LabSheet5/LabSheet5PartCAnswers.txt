@@ -1,0 +1,11 @@
+Q1:
+Brevity means that code is written to be fast and concise but in exchange readbility is sacrificed.
+While Clarity is where it is easy to read and understand the code written but it doesn't run as fast as it could
+
+Q2:
+The code runs at different speeds here as it is written differently.
+The more a function has to do the longer it will take.
+While the less it has to do the quicker it will take.
+
+#define defines the class.
+
