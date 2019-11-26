@@ -123,11 +123,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Employee.h" />
+    <ClInclude Include="ListOfEmployee.h" />
     <ClInclude Include="ListOfInts.h" />
+    <ClInclude Include="NodeOfEmployee.h" />
     <ClInclude Include="NodeofInt.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Employee.cpp" />
+    <ClCompile Include="ListOfEmployee.cpp" />
     <ClCompile Include="ListOfInts.cpp" />
+    <ClCompile Include="NodeOfEmployee.cpp" />
     <ClCompile Include="NodeofInt.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>

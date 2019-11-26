@@ -15,5 +15,4 @@ public:
 
 };
 typedef NodeofInt* ListNodePtr;
-
 #endif
