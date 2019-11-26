@@ -11,9 +11,12 @@ friend class ListOfEmployee;
 
 private:
 	Employee emp;
+	NodeOfEmployee* next;
 
 public:
 	NodeOfEmployee(Employee empIn);
+	Employee getEmp();
+	NodeOfEmployee* getNext();
 
 };
 typedef NodeOfEmployee* EmpNodePtr;

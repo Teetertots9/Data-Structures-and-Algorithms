@@ -6,8 +6,6 @@ using namespace std;
 
 class Employee {
 
-friend class NodeOfEmployee;
-
 public:
 	Employee();
 	Employee(string n, double s);

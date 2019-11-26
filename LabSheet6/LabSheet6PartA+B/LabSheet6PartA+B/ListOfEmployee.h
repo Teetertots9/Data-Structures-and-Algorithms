@@ -7,14 +7,19 @@ using namespace std;
 
 class ListOfEmployee {
 
+	friend class NodeOfEmployee;
+	friend ostream& operator <<(ostream& outputStream, ListOfEmployee& empList);
+
 private:
-	NodeOfEmployee head;
+	NodeOfEmployee* emphead;
 public:
 	void insertAtFront(string s, double d);
 	void deleteMostRecent();
 	double getSalary(string name);
+	ListOfEmployee();
+	NodeOfEmployee* getHead();
 
-	ostream& operator <<(const ostream& outputStream);
+	
 
 };
 #endif // !"LISTOFEMPLOYEE_H"

@@ -2,26 +2,31 @@
 
 Employee::Employee()
 {
+	name = "";
 }
 
 Employee::Employee(string n, double s)
 {
+	name = n;
+	salary = s;
 }
 
 string Employee::getName()
 {
-	return string();
+	return name;
 }
 
 double Employee::getSalary()
 {
-	return 0.0;
+	return salary;
 }
 
 void Employee::setName(string nameIn)
 {
+	name = nameIn;
 }
 
 void Employee::setSalary(double salIn)
 {
+	salary = salIn;
 }
