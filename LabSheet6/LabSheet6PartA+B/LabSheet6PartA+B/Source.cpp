@@ -31,7 +31,9 @@ int main() {
 
 	cout << empList;
 
+
 	//List Of Ints test
+	cout << "List Of Ints test" << endl;
 	ListOfInts l;
 	l.insert(10);
 	l.insert(20);
@@ -39,21 +41,53 @@ int main() {
 	l.insert(40);
 	l.insert(50);
 
+	cout << "Int List 1" << endl;
 	l.displayList();
 
 	ListOfInts l2(l);
+	cout << "Int List 2" << endl;
 	l2.displayList();
 
 	ListOfInts l3;
 
 	l3.insert(300);
 
+	cout << "Int List 3 part 1" << endl;
 	l3.displayList();
 
 	l3 = l;
 
+	cout << "Int List 3 part 2" << endl;
 	l3.displayList();
 
+
+	//ListOfEmployee Rule of 3 test
+	cout << "ListOfEmployee Rule of 3 test" << endl;
+	ListOfEmployee empL1;
+	empL1.insertAtFront("emp1", 100);
+	empL1.insertAtFront("emp2", 200);
+	empL1.insertAtFront("emp3", 300);
+	empL1.insertAtFront("emp4", 400);
+	empL1.insertAtFront("emp5", 500);
+
+	cout << "Emp List 1" << endl;
+	cout << empL1;
+
+	ListOfEmployee empL2(empL1);
+
+	cout << "Emp List 2" << endl;
+	cout << empL2;
+
+	ListOfEmployee empL3;
+	empL3.insertAtFront("emp10", 10000);
+
+	cout << "Emp List 3 p1" << endl;
+	cout << empL3;
+
+	empL3 = empL2;
+
+	cout << "Emp List 3 p2" << endl;
+	cout << empL3;
 
 	return 0;
 }

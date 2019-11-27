@@ -38,8 +38,8 @@ Account::Account(int num, float bal) {
 Account::~Account()
 {
 	totalAccounts--;
-	accountNumber = 0;
-	accountBalance = 0;
+	accountNumber = NULL;
+	accountBalance = NULL;
 }
 
 ostream& operator<<(ostream& outputStream, const Account& bAccount)

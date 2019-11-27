@@ -17,8 +17,10 @@ public:
 	void deleteMostRecent();
 	double getSalary(string name);
 	ListOfEmployee();
+	~ListOfEmployee();
+	ListOfEmployee(const ListOfEmployee& empL);
 	NodeOfEmployee* getHead();
-
+	ListOfEmployee& operator=(const ListOfEmployee& empL);
 	
 
 };

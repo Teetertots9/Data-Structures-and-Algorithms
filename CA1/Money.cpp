@@ -35,17 +35,17 @@ istream& operator >>(istream& inputStream, Money& aMoney) {
 	return inputStream;
 }
 
-string operator +(const Money& first, const Money& second) {
+string Money::operator +(const Money& moneyIn) {
 	string s = "$";
-	s += first.majorUnit + second.majorUnit; 
+	s += majorUnit + moneyIn.majorUnit;
 	s += ".";
-	s += first.minorUnit + second.minorUnit;
+	s += minorUnit + moneyIn.minorUnit;
 		return s;
 }
 
-string operator -(const Money& first, const Money& second) {
+string Money::operator -(const Money& moneyIn) {
 	string s = "$";
-	s += first.majorUnit - second.majorUnit;
-	s += first.minorUnit - second.minorUnit;
+	s += majorUnit - moneyIn.majorUnit;
+	s += minorUnit - moneyIn.minorUnit;
 	return s;
 }
