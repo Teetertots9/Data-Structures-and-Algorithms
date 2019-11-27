@@ -32,6 +32,28 @@ int main() {
 	cout << empList;
 
 	//List Of Ints test
+	ListOfInts l;
+	l.insert(10);
+	l.insert(20);
+	l.insert(30);
+	l.insert(40);
+	l.insert(50);
+
+	l.displayList();
+
+	ListOfInts l2(l);
+	l2.displayList();
+
+	ListOfInts l3;
+
+	l3.insert(300);
+
+	l3.displayList();
+
+	l3 = l;
+
+	l3.displayList();
+
 
 	return 0;
 }

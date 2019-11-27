@@ -16,7 +16,9 @@ public:
 	int deleteMostRecent();
 	void deleteInt(int pos);
 	ListOfInts();
+	ListOfInts(const ListOfInts& l);
 	~ListOfInts();
+	ListOfInts& operator =(const ListOfInts& l);
 };
 
 #endif

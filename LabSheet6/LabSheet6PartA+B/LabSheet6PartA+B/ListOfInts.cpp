@@ -60,6 +60,11 @@ ListOfInts::ListOfInts()
 	head = nullptr;
 }
 
+ListOfInts::ListOfInts(const ListOfInts& l)
+{
+	*this = l;
+}
+
 ListOfInts::~ListOfInts()
 {
 	while (head) {
@@ -69,4 +74,24 @@ ListOfInts::~ListOfInts()
 
 		delete temptr;
 	}
+}
+
+
+ListOfInts& ListOfInts::operator=(const ListOfInts& l)
+{
+	if (this != &l) {
+		if (head != NULL) this->~ListOfInts();
+		ListNodePtr copyPtr = NULL, origPtr = l.head;
+		while (origPtr != NULL) {
+			if (head == NULL) {
+				head = copyPtr = new NodeofInt(origPtr->nodeInt);
+			}
+			else {
+				copyPtr->next = new NodeofInt(origPtr->nodeInt);
+				copyPtr = copyPtr->next;
+			}
+			origPtr = origPtr->next;
+		}
+	}
+	return *this;
 }
