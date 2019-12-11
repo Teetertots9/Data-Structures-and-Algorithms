@@ -1,26 +1,28 @@
 #include "ListOfDoubles.h"
+#include "Stack.h"
 #include <iostream>
 using namespace std;
 
 int main()
 {
 	ListOfDoubles dList;
+	Stack stack(dList);
 	cout << "push test" << endl;
-	dList.push(25.5);
-	dList.push(35.5);
-	dList.push(45.5);
-	dList.push(55.5);
+	stack.push(25.5);
+	stack.push(35.5);
+	stack.push(45.5);
+	stack.push(55.5);
 	
 	cout << "operator test" << endl;
-	cout << dList;
+	cout << stack;
 
 	cout << "top and pop test" << endl;
 
-	double d1 = dList.top();
+	double d1 = stack.top();
 	cout << d1 << endl;
 
-	dList.pop();
-	cout << dList;
+	stack.pop();
+	cout << stack;
 	
 
 

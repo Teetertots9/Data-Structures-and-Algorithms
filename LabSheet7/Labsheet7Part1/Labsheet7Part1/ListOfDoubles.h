@@ -18,7 +18,7 @@ private:
 
 class ListOfDoubles
 {
-	friend  ostream& operator<<(  ostream& outputStream, ListOfDoubles& dList);
+	
 public:
 	ListOfDoubles();
 	~ListOfDoubles();
@@ -26,9 +26,7 @@ public:
 	void displayList(ostream& str) const;
 	double deleteMostRecent();
 	double deleteDouble(int pos);
-	void push(double val);
-	void pop();
-	double top();
+	DoubleListNode* getHead();
 private:
 	DoubleListNode* head;
 };

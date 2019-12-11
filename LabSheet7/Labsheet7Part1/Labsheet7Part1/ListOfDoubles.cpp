@@ -106,28 +106,9 @@ double ListOfDoubles::deleteDouble(int pos)
 	return retval;  //if leader was NULL - we came to the end of the list before reaching pos, but retval was init to 0 which is what we want!
 }
 
-void ListOfDoubles::push(double val)
+DoubleListNode* ListOfDoubles::getHead()
 {
-	insert(val);
+	return head;
 }
 
-void ListOfDoubles::pop()
-{
-	deleteMostRecent();
-}
 
-double ListOfDoubles::top()
-{
-	return head->theValue;
-}
-
- ostream& operator<<( ostream& outputStream, ListOfDoubles& dList)
-{
-	DoubleListNode* temp = dList.head;
-	while (temp)
-	{
-		outputStream << temp->getDouble() << endl;
-		temp = temp->getNext();
-	}
-	return outputStream;
-}
